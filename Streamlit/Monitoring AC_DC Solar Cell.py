@@ -9,6 +9,8 @@ from pandas.api.types import is_datetime64tz_dtype
 import pytz
 from PIL import Image
 import base64
+from streamlit_autorefresh import st_autorefresh
+
 
 # === Konfigurasi ===
 DATA_URL = "https://script.google.com/macros/s/AKfycbyJgS_nkBZ05_0dv4uMiS1W3SStmkJr8GhL5S3xUdI9EBOlPGyhkj5T1tJkwRhmKM74TQ/exec"
@@ -27,6 +29,9 @@ st.set_page_config(
     layout="wide",
     page_icon=logo
 )
+
+# Auto-refresh setiap 60 detik
+st_autorefresh(interval=60000, key="auto_refresh")
 
 # CSS + header logo
 st.markdown(
