@@ -4,3 +4,4 @@ requests>=2.31
 plotly>=5.19
 pytz>=2024.1
 pillow>=10.0
+streamlit-autorefresh
